@@ -711,3 +711,359 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nandan K | My Profile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #3e2b1f;
+            background:
+                linear-gradient(rgba(74, 48, 30, 0.25), rgba(74, 48, 30, 0.25)),
+                #d2b48c;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12) 0 2px, transparent 3px),
+                radial-gradient(circle at 80% 70%, rgba(70,40,20,0.08) 0 2px, transparent 3px),
+                linear-gradient(135deg, #d8bd91, #b89567);
+            background-size: 8px 8px, 11px 11px, 100% 100%;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            background: rgba(244, 226, 190, 0.94);
+            border: 8px double #654321;
+            box-shadow:
+                0 0 0 4px #c49a6c,
+                0 15px 35px rgba(50, 30, 10, 0.5);
+            padding: 35px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid #654321;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        .namaskara {
+            font-size: 80px;
+            margin-bottom: 10px;
+            filter: sepia(0.5);
+        }
+
+        h1 {
+            font-size: 48px;
+            letter-spacing: 4px;
+            color: #4b2e1f;
+            text-shadow: 2px 2px #c7a678;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            margin-top: 10px;
+            font-style: italic;
+            color: #704d32;
+        }
+
+        .engineering-symbol {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 18px;
+            border: 2px solid #654321;
+            border-radius: 50%;
+            font-size: 28px;
+            background: #d7b98a;
+            box-shadow: inset 0 0 10px rgba(70, 40, 20, 0.25);
+        }
+
+        section {
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #4b2e1f;
+            border-left: 7px solid #704214;
+            padding-left: 12px;
+            margin-bottom: 18px;
+        }
+
+        .about {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: rgba(210, 180, 140, 0.55);
+            border: 2px solid #805a38;
+            padding: 20px;
+            min-height: 150px;
+            transition: 0.3s;
+            box-shadow: 4px 4px 0 #a47c52;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 7px 7px 0 #805a38;
+        }
+
+        .card h3 {
+            color: #593820;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 9px 0;
+            font-size: 17px;
+        }
+
+        li::before {
+            content: "✦ ";
+            color: #704214;
+            font-weight: bold;
+        }
+
+        .contact {
+            text-align: center;
+            background: #c6a477;
+            border: 3px solid #654321;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .phone {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 24px;
+            color: #402718;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #654321;
+            font-style: italic;
+            color: #654321;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            .namaskara {
+                font-size: 65px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <!-- Namaskara cartoon hands -->
+            <div class="namaskara">🙏</div>
+
+            <h1>NANDAN K</h1>
+
+            <p class="subtitle">
+                Engineering Student • Future Engineer • Code Learner
+            </p>
+
+            <div class="engineering-symbol">
+                ⚙️ 💻 ⚡
+            </div>
+        </header>
+
+        <section>
+            <h2>👋 About Me</h2>
+
+            <p class="about">
+                Namaskara! I am <strong>Nandan K</strong>, an engineering student
+                who is interested in technology, coding, creativity and learning
+                new things. I enjoy exploring how things work and developing my
+                skills step by step. My goal is to become a skilled engineer and
+                continue learning throughout my journey.
+            </p>
+        </section>
+
+        <section>
+            <h2>🎓 My Engineering Journey</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>⚙️ Engineering</h3>
+                    <p>
+                        Studying engineering and building a strong foundation
+                        in technical and problem-solving skills.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>💻 Coding</h3>
+                    <p>
+                        Learning programming, web development and creating
+                        useful projects with code.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🚀 Future Goal</h3>
+                    <p>
+                        To become a knowledgeable and creative engineer who
+                        can build meaningful technology.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>📚 My Learning Goals</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>💻 Programming</h3>
+                    <p>
+                        Improve my knowledge of HTML, CSS, JavaScript and
+                        other programming languages.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🧠 Problem Solving</h3>
+                    <p>
+                        Develop logical thinking and learn how to solve
+                        real-world problems.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🌐 Web Development</h3>
+                    <p>
+                        Learn how to design and develop modern and useful
+                        websites.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>📖 Continuous Learning</h3>
+                    <p>
+                        Explore new technologies and keep improving my
+                        technical and creative skills.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>🎯 Things I Am Learning</h2>
+
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript and Web Development</li>
+                <li>Programming & Logical Thinking</li>
+                <li>Computer and Engineering Concepts</li>
+                <li>Building Personal Projects</li>
+                <li>Learning New Technologies</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🎮 My Hobbies</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>🎮 Playing Games</h3>
+                    <p>
+                        I enjoy playing games during my free time and
+                        challenging myself to improve.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🏏 Sports</h3>
+                    <p>
+                        I enjoy sports and staying active through different
+                        physical activities.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>💡 Exploring</h3>
+                    <p>
+                        I like exploring new ideas, technologies and things
+                        that help me learn something new.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>📞 Contact Me</h2>
+
+            <p>
+                Feel free to contact me:
+            </p>
+
+            <div class="phone">
+                ☎ 8073353395
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                ✦ Nandan K • Engineering Student • Keep Learning • Keep Growing ✦
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
