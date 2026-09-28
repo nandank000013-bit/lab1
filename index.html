@@ -172,3 +172,542 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nandan K | CSE Student</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background: #050816;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #00bfff;
+            border-radius: 50%;
+            filter: blur(180px);
+            opacity: 0.25;
+            top: -150px;
+            left: -150px;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #7c3aed;
+            border-radius: 50%;
+            filter: blur(180px);
+            opacity: 0.25;
+            bottom: -150px;
+            right: -150px;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(5, 8, 22, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav h1 {
+            color: #00d9ff;
+            font-size: 28px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00d9ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .profile-circle {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d9ff, #7c3aed);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-weight: bold;
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.5);
+        }
+
+        .hero h2 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 span {
+            color: #00d9ff;
+        }
+
+        .hero h3 {
+            font-size: 25px;
+            color: #a5b4fc;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 30px;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #00d9ff, #7c3aed);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 217, 255, 0.5);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 50px;
+            color: #00d9ff;
+        }
+
+        /* About */
+        .about-box {
+            max-width: 850px;
+            margin: auto;
+            padding: 35px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            line-height: 1.9;
+            color: #dbeafe;
+            font-size: 17px;
+        }
+
+        /* Education */
+        .education-card {
+            max-width: 750px;
+            margin: auto;
+            padding: 35px;
+            border-left: 5px solid #00d9ff;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .education-card h3 {
+            color: #00d9ff;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .education-card p {
+            color: #cbd5e1;
+            margin: 8px 0;
+        }
+
+        /* Learning */
+        .learning {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .learning-card {
+            padding: 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .learning-card:hover {
+            transform: translateY(-10px);
+            border-color: #00d9ff;
+        }
+
+        .learning-card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .learning-card h3 {
+            color: #00d9ff;
+            margin-bottom: 10px;
+        }
+
+        .learning-card p {
+            color: #cbd5e1;
+        }
+
+        /* Hobbies */
+        .hobbies {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .hobby {
+            width: 220px;
+            padding: 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .hobby:hover {
+            transform: scale(1.05);
+            background: rgba(0, 217, 255, 0.1);
+        }
+
+        .hobby span {
+            display: block;
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hobby h3 {
+            color: #fff;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #03050f;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h2 {
+                font-size: 40px;
+            }
+
+            .hero h3 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h1>Nandan K</h1>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#learning">Learning</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="profile-circle">
+                NK
+            </div>
+
+            <h2>Hello, I'm <span>Nandan K</span></h2>
+
+            <h3>Computer Science Engineering Student</h3>
+
+            <p>
+                Currently pursuing my CSE degree at
+                <strong>Jain Institution of Technology</strong>.
+            </p>
+
+            <p>
+                I'm passionate about coding, technology,
+                learning new things and building my skills.
+            </p>
+
+            <a href="#about" class="btn">Explore My Profile</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-box">
+
+            <p>
+                Hi! My name is <strong>Nandan K</strong>.
+                I am currently studying Computer Science and Engineering
+                at <strong>Jain Institution of Technology</strong>.
+            </p>
+
+            <p>
+                I have been learning coding for about one year.
+                During this journey, I have started exploring different
+                areas of programming and technology.
+            </p>
+
+            <p>
+                I enjoy learning new things in coding and improving
+                my programming skills step by step. I believe that
+                continuous learning and practice are important for
+                becoming a good developer.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-card">
+
+            <h3>🎓 Bachelor of Engineering</h3>
+
+            <p>
+                <strong>Branch:</strong>
+                Computer Science and Engineering (CSE)
+            </p>
+
+            <p>
+                <strong>Institution:</strong>
+                Jain Institution of Technology
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                Currently Studying
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Learning -->
+    <section id="learning">
+
+        <h2 class="section-title">My Learning Journey</h2>
+
+        <div class="learning">
+
+            <div class="learning-card">
+                <div class="icon">💻</div>
+                <h3>Programming</h3>
+                <p>
+                    Learning programming concepts and
+                    improving my problem-solving skills.
+                </p>
+            </div>
+
+            <div class="learning-card">
+                <div class="icon">🌐</div>
+                <h3>Web Development</h3>
+                <p>
+                    Exploring HTML, CSS, JavaScript and
+                    modern web technologies.
+                </p>
+            </div>
+
+            <div class="learning-card">
+                <div class="icon">🧠</div>
+                <h3>Problem Solving</h3>
+                <p>
+                    Practicing logical thinking and
+                    solving coding problems.
+                </p>
+            </div>
+
+            <div class="learning-card">
+                <div class="icon">🚀</div>
+                <h3>New Technologies</h3>
+                <p>
+                    Always interested in learning
+                    new technologies and tools.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Hobbies -->
+    <section id="hobbies">
+
+        <h2 class="section-title">My Hobbies</h2>
+
+        <div class="hobbies">
+
+            <div class="hobby">
+                <span>♟️</span>
+                <h3>Chess</h3>
+                <p>Playing chess and improving strategic thinking.</p>
+            </div>
+
+            <div class="hobby">
+                <span>🎮</span>
+                <h3>Gaming</h3>
+                <p>Enjoying different types of games in my free time.</p>
+            </div>
+
+            <div class="hobby">
+                <span>💻</span>
+                <h3>Coding</h3>
+                <p>Learning and experimenting with programming.</p>
+            </div>
+
+            <div class="hobby">
+                <span>📚</span>
+                <h3>Learning</h3>
+                <p>Exploring new topics and technologies.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact">
+
+            <p>👨‍💻 <strong>Nandan K</strong></p>
+
+            <p>🎓 CSE Student - Jain Institution of Technology</p>
+
+            <p>📧 your-email@example.com</p>
+
+            <a href="mailto:your-email@example.com" class="btn">
+                Send Me an Email
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Nandan K | CSE Student | Keep Learning 🚀
+        </p>
+
+    </footer>
+
+</body>
+</html>
